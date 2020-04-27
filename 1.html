@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./../css/commcon.css">
+    <link rel="stylesheet" href="./../css/indexanimation.css">
+    <link rel="stylesheet" href="./../css/jieqishow.css">
+    <script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>   
+</head>
+
+<body>
+    
+<div id='all'>
+    <header id="head">
+        <!--顶部包含一个背景图 logo以及一个搜索框等-->
+        <div class="welcome">
+            <div class="content">
+                <p>欢迎光临本站！</p>
+                <p>欢迎光临本站！</p>
+            </div>
+        </div>
+        <!--logo部分-->
+        <img src="./../img/logo.gif" alt=""/>
+       <h1>{{name}}</h1>
+    </header>
+
+    <div id="banner">
+        <div id='jqys'>
+
+            <div id='introduction'>
+                <h2>1. {{name}}简介</h2>
+                <div class='words'>
+                    {{introduction}}
+                </div>
+            </div>
+
+            <div id='source'>
+                <h2>2. {{name}}的由来</h2>
+                <div>
+                    {{source}}
+                </div>
+            </div>
+
+            <video :src=video controls :poster='img'></video>
+
+            <div id='yangsheng'>
+                <h2>3. 立春养生</h2>
+                <div class='aspects'>
+
+                    <h3>1. 男士：</h3>
+                    <ul>
+                        <div v-for='item in man'>
+                            <h3>{{item.title}}</h3>
+                            <li>{{item.content}}</li>
+                        </div>
+                    </ul>
+
+                    <h3>2.女士：</h3>
+                    <ul>
+                        <div v-for='item in woman'>
+                            <h3>{{item.title}}</h3>
+                            <li>{{item.content}}</li>
+                        </div>
+                    </ul>
+
+                    <h3>3.老人：</h3>
+                    <ul>
+                        <div>
+                            {{old}}
+                        </div>
+                    </ul>
+
+                    <h3>4.孕妇：</h3>
+                    <ul>
+                        <div>
+                           {{pregnant}}
+                        </div>
+                    </ul>
+                
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+    <script>
+         var x = location.search;
+        console.log(x);
+        var index = x.indexOf('=')+1;
+        var uid=x.substr(index);
+        console.log(uid);
+        var copyVdata=[];
+        ajax({
+                type:'POST',//发送类型
+                url:'http://127.0.0.1',//发送的地址
+                port:8081,   //端口号
+                path:'/season', 
+                data:{
+                    id:uid,
+                },
+                //成功之后将数据拿到success属性中使用
+                success:function(result){
+                    console.log('return：'+result);
+                    var vdata=JSON.parse(result);
+                    console.log(vdata);
+                    copyVdata=vdata.map(function(item,index){  //复制一份 安全
+                        return {
+                           name:item.name,
+                           introduction:item.introduction,
+                           source:item.source,
+                           man:item.man,
+                           woman:item.woman,
+                           old:item.old,
+                           pregnant:item.pregnant,
+                           video:item.video,
+                           img:item.img,
+                        }
+                    });
+                    console.log(copyVdata);
+                    var man=[];
+                    fn(copyVdata[0].man,man);
+                    var woman=[];
+                    fn(copyVdata[0].woman,woman);
+                    console.log(man);
+                    var arr=[];
+                    var arr1=[];
+                    for(var i=0;i<=man.length/2;i++){
+                        arr.push({
+                            title:man[i],
+                            content:man[i+1],
+                        })
+                        i++;
+                    }
+                    for(var i=0;i<=woman.length/2;i++){
+                        arr1.push({
+                            title:woman[i],
+                            content:woman[i+1],
+                        })
+                        i++;
+                    }
+                    console.log(arr);
+                    console.log(arr1);
+                    var app=new Vue({
+                            el:'#all',
+                            data:{
+                                name:copyVdata[0].name,
+                                introduction:copyVdata[0].introduction,
+                                source:copyVdata[0].source,
+                                old:copyVdata[0].old,
+                                pregnant:copyVdata[0].pregnant,
+                                img:copyVdata[0].img,
+                                video:copyVdata[0].video,
+                                man:arr,
+                                woman:arr1,
+
+                            }
+                        }) 
+                },
+                //失败
+                error:function(){
+                    console.log('连接服务器失败');
+                }
+            }); 
+
+           
+            function ajax(ajaxObj){
+                var xhr=new XMLHttpRequest();
+                if(ajaxObj.type=='POST'){
+                    xhr.open(ajaxObj.type,ajaxObj.url+':'+ajaxObj.port+ajaxObj.path,true);
+                    xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=utf-8");
+                    xhr.send(jsonToString(ajaxObj.data));
+                    console.log(ajaxObj.data);
+                    console.log(jsonToString(ajaxObj.data));
+                } 
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState==4){
+                        if(xhr.status>=200 && xhr.status<300){
+                            if(ajaxObj.success){
+                                ajaxObj.success(xhr.responseText)
+                            }
+                        }else{
+                            xhr.onerror(function(err){
+                                if(ajaxObj.error){
+                                    ajaxObj.error(err);
+                                }
+                            })
+                        }
+                    }
+                }
+            
+        }
+        function jsonToString(json) {
+            //console.log(json);
+            var arr=[];
+            for(var i in json){
+                //i是属性名
+                //console.log(json[i]);
+                arr.push(i+'='+json[i]);
+            }
+            var str=arr.join('&')
+            return str;
+        }
+       
+        function fn(str,arr){
+            //解析字符串
+                    var xindex=0;
+                    var i=0;
+                    var index=str.indexOf('&');
+                    while(index!==-1){
+                        if(i==0){
+                            arr[i]=str.slice(xindex,index);
+                            console.log(index);
+                            xindex=index;
+                            index=str.indexOf('&',index+1);
+                            i++ 
+                        }else{
+                            arr[i]=str.slice(xindex+1,index)
+                            console.log(index);
+                            xindex=index;
+                            index=str.indexOf('&',index+1);
+                            i++ 
+                        }  
+                        if(index==-1){
+                            arr[i]=str.slice(xindex+1);
+                            i++ 
+                        } 
+                    }
+        }
+    </script>
+</body>
+
+</html>
