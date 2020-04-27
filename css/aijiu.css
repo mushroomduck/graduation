@@ -1,0 +1,136 @@
+header{
+    /*图片的整体高度为147px*/
+    height:147px;
+    /*默认宽度为父元素及body元素的宽度*/
+    background:url(./../img/background1.jpg) no-repeat fixed;
+}
+.welcome{
+    height:30px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top:50px;
+    left:220px;
+}
+.content p{
+    position: absolute;
+    font-size:18px;
+}
+header>img{
+    /*调整图片的高度*/
+    height:117px;
+    position:absolute;
+    /*147-117=30/2=15 居中显示*/
+    top:15px;
+    left:320px;
+}
+header>div{
+    position:relative;
+    top:50px;
+    left:920px;
+}
+header>div>#text{
+    width:320px;
+    height:34px;
+    /*光标离边框的距离*/
+    padding-left:30px;
+    outline:none;
+    border:1px solid red;
+}
+#head h1{
+    font-size:50px;
+    position: absolute;
+    left:45%;
+    top:30px;
+    color:red;
+}
+
+/* 主体 */
+#shuiliao{
+    width: 100%;
+    height:1700px;
+    background-color: rgb(244,244,244);
+}
+
+#banner{
+    width:70%;
+    height:1700px;
+    margin:0 auto;
+    background-color: white;
+    position: relative;
+}
+#name{
+    top:10px;
+   height:20%;
+    width:70%;
+    
+    margin:0 auto;
+    position: relative;
+    /* border:1px solid red; */
+}
+#disease{
+    width:70%;
+    height:12%;
+    margin:0 auto;
+    position: relative;
+    top:120px;
+    /* margin-top:300px; */
+}
+#disease1{
+    width:70%;
+    height:8%;
+    margin:0 auto;
+    position: relative;
+    top:120px;
+    /* margin-top:300px; */
+}
+#pre{
+    width:70%;
+    height:20%;
+    margin:0 auto;
+    position: relative;
+    top:120px;
+    /* margin-top:300px; */
+}
+.bord{
+    width:100%;
+    height:30px;
+    border-left:8px solid rgb(213,213,213);
+    border-bottom:2px solid  rgb(213,213,213);
+    position: absolute;
+    top:10px;
+}
+.num{
+    font-size:30px;
+    color:rgb(208,102,0);
+    position: absolute;
+    left:15px;
+    top:0px;
+}
+.title{
+    font-size:30px;
+    color:rgb(85,85,85);
+    position: absolute;
+    left:55px;
+    top:0px;
+}
+.content{
+    font-size:20px;
+    color:rgb(68,68,68);
+    position: absolute;
+    left:55px;
+    top:70px;
+}
+.content a{
+    float: left;
+    color:rgb(207,51,204);
+    text-decoration:underline;
+    margin-left:20px;
+    margin-right:90px;
+}
+video{
+    margin-top:20px;
+    width:100%;
+    height:300px;
+    object-fit: fill;
+}

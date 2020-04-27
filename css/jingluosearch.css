@@ -1,0 +1,154 @@
+header{
+    /*图片的整体高度为147px*/
+    height:147px;
+    /*默认宽度为父元素及body元素的宽度*/
+    background:url(./../img/background1.jpg) no-repeat fixed;
+}
+.welcome{
+    height:30px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top:50px;
+    left:220px;
+}
+.content p{
+    position: absolute;
+    font-size:18px;
+}
+header>img{
+    /*调整图片的高度*/
+    height:117px;
+    position:absolute;
+    /*147-117=30/2=15 居中显示*/
+    top:15px;
+    left:320px;
+}
+header>div{
+    position:relative;
+    top:50px;
+    left:920px;
+}
+header>div>#text{
+    width:320px;
+    height:34px;
+    /*光标离边框的距离*/
+    padding-left:30px;
+    outline:none;
+    border:1px solid red;
+}
+#head h1{
+    font-size:50px;
+    position: absolute;
+    left:45%;
+    top:30px;
+    color:red;
+}
+
+/* 穴位搜索 */
+#jlsearchbgc{
+    width:100%;
+    height:100px;
+    /* border:1px solid red; */
+    position: absolute;
+    top:40%;
+    left:15%;
+}
+#banner{
+    width:70%;
+    height:100px;
+    /* border:1px solid blue; */
+    margin:0 auto;
+}
+.banner{
+    position: relative;
+    top:-50px;
+    left:-40px;
+}
+label{
+    font-size:25px;
+}
+select{
+    width:160px;
+    height:50px;
+    font-size:16px;
+    margin-left:20px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+input{
+    width:120px;
+    height:50px;
+    margin-left:20px;
+}
+#intro{
+    width:800px;
+    height:400px;
+    /* border:1px solid red; */
+    font-size:20px;
+    margin-top:30px;
+    line-height:40px;
+
+}
+
+
+
+/* 底部 */
+#footerbgc{
+    /*margin-top:20px;*/
+    width:100%;
+    position:relative;
+    top:410px;
+    height:200px;
+    background:rgb(222,222,222);
+    /*overflow:hidden;*/
+}
+#footer{
+    position: relative;
+    width:80%;
+    height:200px;
+    /*border:1px solid yellow;*/
+    margin:0 auto;
+    /*overflow:hidden;*/
+}
+.footer1,.footer2,.footer3{
+    float:left;
+}
+.footer1{
+    width:33%;
+    height:200px;
+    background: url(./../img/footer1.webp);
+    position: relative;
+}
+.footer2{
+    width:33%;
+    height:200px;
+    background: url(./../img/footer2.png);
+    position: relative;
+}
+.footer3{
+    width:33%;
+    height:200px;
+    background: url(./../img/footer3.webp);
+    position: relative;
+}
+.footer1 img,.footer2 img,.footer3 img{
+    position: absolute;
+    top:60px;
+    left:150px;
+}
+#footer{
+    color:white;
+}
+.footer a{
+    font-size:16px;
+    position:absolute;
+    top:130px;
+    left:145px;
+    color:white;
+}
+.footer p{
+    position:absolute;
+    top:160px;
+    left:100px;
+}

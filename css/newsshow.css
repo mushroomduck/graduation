@@ -1,0 +1,137 @@
+header{
+    /*图片的整体高度为147px*/
+    height:147px;
+    /*默认宽度为父元素及body元素的宽度*/
+    background:url(./../img/background1.jpg) no-repeat fixed;
+}
+.welcome{
+    height:30px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top:50px;
+    left:220px;
+}
+.content p{
+    position: absolute;
+    font-size:18px;
+}
+header>img{
+    /*调整图片的高度*/
+    height:117px;
+    position:absolute;
+    /*147-117=30/2=15 居中显示*/
+    top:15px;
+    left:320px;
+}
+header>div{
+    position:relative;
+    top:50px;
+    left:920px;
+}
+header>div>#text{
+    width:320px;
+    height:34px;
+    /*光标离边框的距离*/
+    padding-left:30px;
+    outline:none;
+    border:1px solid red;
+}
+#head h1{
+    font-size:50px;
+    position: absolute;
+    left:45%;
+    top:30px;
+    color:red;
+}
+
+/* 新闻主体部分 */
+#newsbgc{
+    width:100%;
+}
+#news{
+    width:70%;
+    height:1000px;
+    margin:0 auto;
+    position: relative;
+}
+#news .title{
+    text-align: center;
+}
+#news .date{
+    font-size:20px;
+    /* position: absolute;
+    left:88%; */
+    text-align: right;
+}
+#title{
+    border-bottom:1px solid grey;
+    height:55px;
+}
+#daoyu{
+    height:50px;
+    width:100%;
+    position: relative;
+    border-bottom:1px dashed grey;
+}
+.daoyubgc{
+    display: block;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    width:45px;
+    height:40px;
+    background-color:rgb(102,170,51) ;
+    font-size:20px;
+    color:white;
+    line-height:40px;
+    float:left;
+    position: absolute;
+    top:5px;
+}
+.daoyu{
+    float:left;
+    position: absolute;
+    top:15px;
+    font-size: 16px;
+    left:70px;
+}
+
+#banner{
+   
+    box-sizing: border-box;
+    padding-top:20px;
+    width:80%;
+    margin:0 auto;
+    height:1000px;
+  
+}
+#banner .words1{
+    text-indent: 2rem;
+}
+#banner .img1{
+    margin-top:10px;
+    margin-left:25px;
+    width:800px;
+    height:200px;
+}
+.sub{
+    font-weight: bold;
+    margin-top:20px;
+}
+.subitr{
+    text-indent: 2rem;
+    margin-top:10px;
+}
+.thriditr .content1{
+    font-weight: bold;
+    margin-top:10px;
+}
+.thriditr img{
+    width:800px;
+    height:150px;
+    margin-top:10px;
+    margin-left:25px;
+}
+.thriditr .content2{
+    text-indent: 2rem;
+}

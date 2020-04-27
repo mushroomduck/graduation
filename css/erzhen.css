@@ -1,0 +1,171 @@
+header{
+    /*图片的整体高度为147px*/
+    height:147px;
+    /*默认宽度为父元素及body元素的宽度*/
+    background:url(./../img/background1.jpg) no-repeat fixed;
+}
+.welcome{
+    height:30px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top:50px;
+    left:220px;
+}
+.content p{
+    position: absolute;
+    font-size:18px;
+}
+header>img{
+    /*调整图片的高度*/
+    height:117px;
+    position:absolute;
+    /*147-117=30/2=15 居中显示*/
+    top:15px;
+    left:320px;
+}
+header>div{
+    position:relative;
+    top:50px;
+    left:920px;
+}
+header>div>#text{
+    width:320px;
+    height:34px;
+    /*光标离边框的距离*/
+    padding-left:30px;
+    outline:none;
+    border:1px solid red;
+}
+#head h1{
+    font-size:50px;
+    position: absolute;
+    left:46%;
+    top:30px;
+    color:red;
+}
+/* 主体 */
+#face{
+    width:100%;
+    height:1000px;
+    position: relative;
+}
+#banner{
+    width:70%;
+    height:1000px;
+    position: relative;
+    margin:0 auto;
+    /* border:1px solid green; */
+}
+.introduction{
+    box-sizing: border-box;
+    position: relative;
+    /* height:1000px;
+    border:1px solid red; */
+}
+.introduction .words{
+    
+    font-size:20px;
+    width: 100%;
+    margin: 0 auto;
+    border:1px solid black;
+    height:400px;
+    box-shadow: 1px 1px 1px darkgray;
+    text-indent: 2rem;
+    line-height: 40px;
+}
+.introduction img{
+    position: absolute;
+    top:150px;
+    border:1px solid darkgrey;
+    width:500px;
+    height:500px;
+}
+.left{
+    position: absolute;
+    top:150px;
+    left:20px;
+}
+.right{
+    position: absolute;
+    top:150px;
+    left:550px;
+}
+#content{
+    width:100%;
+    position: relative;
+    height:1500px;
+    border:1px solid black;
+    box-shadow: 1px 1px 1px darkgray;
+    top:200px;
+}
+#see{
+    position: relative;
+}
+#color{
+    position: relative;
+    top:750px;
+}
+#disease{
+    position: relative;
+    top:1250px;
+}
+.green{
+    width:20px;
+    height:40px;
+    background-color: rgb(55,171,47);
+    position: absolute;
+    top:60px;
+}
+#see .title{
+    position: absolute;
+    font-size:30px;
+    top:60px;
+    left:40px;
+}
+#color .title{
+    position: absolute;
+    font-size:30px;
+    top:60px;
+    left:40px;
+}
+#disease .title{
+    position: absolute;
+    font-size:30px;
+    top:60px;
+    left:40px;
+}
+#see ul{
+    position: absolute;
+    top:120px;
+    left:40px;
+}
+#color ul li{
+    font-size:20px;
+    margin-top:10px;
+}
+#disease ul li{
+    font-size:20px;
+    margin-top:10px;
+    text-decoration: underline;
+    cursor: pointer;
+    float: left;
+    margin-left:20px;
+}
+#content ul{
+    position: absolute;
+    top:120px;
+    left:40px;
+}
+#see ul .subtitle{
+    font-size:25px;
+}
+#see ul div{
+    margin-top:10px;
+}
+#see ul li{
+    /* text-indent: 2rem; */
+    margin-top:10px;
+    font-size:20px;
+    line-height: 30px;
+}

@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding:0;
+
+}
+body{
+    font: 12px "微软雅黑",Arial;
+    background-color: rgb(255,255,255);
+    overflow-x:hidden;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #595857;
+}
+
+.clearbox{
+    clear: both;
+    overflow: hidden;
+    content: "";
+    display: table;
+}
+/*header,nav,section,footer{*/
+    /*width: 1000px;*/
+    /*margin:0 auto;*/
+    /*box-sizing: border-box;*/
+/*}*/

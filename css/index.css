@@ -1,0 +1,1415 @@
+header{
+    /*图片的整体高度为147px*/
+    height:147px;
+    /*默认宽度为父元素及body元素的宽度*/
+    background:url(./../img/background1.jpg) no-repeat fixed;
+}
+.welcome{
+    height:30px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top:50px;
+    left:220px;
+}
+.content p{
+    position: absolute;
+    font-size:18px;
+}
+header>img{
+    /*调整图片的高度*/
+    height:117px;
+    position:absolute;
+    /*147-117=30/2=15 居中显示*/
+    top:15px;
+    left:320px;
+}
+header>div{
+    position:relative;
+    top:50px;
+    left:920px;
+}
+header>div>#text{
+    width:320px;
+    height:34px;
+    /*光标离边框的距离*/
+    padding-left:30px;
+    outline:none;
+    border:1px solid red;
+}
+
+header>div>#searchpicture{
+    width:40px;
+    height:34px;
+    background:url(./../img/search.png) no-repeat;
+    background-size:30px;
+    position:absolute;
+    /*34-30=4/2=2 垂直居中*/
+    top:2px;
+    left:0;
+}
+header>div>#searchtext{
+    font-size:20px;
+    color:white;
+    line-height:34px;
+    text-align:center;
+    width:80px;
+    height:34px;
+    background:rgba(244,30,18,1);
+    position: absolute;
+    top:0;
+    /*320+30+2=352*/
+    left:352px;
+    border:1px solid red;
+}
+/*header结束*/
+
+nav{
+    top:0;
+    height:68px;
+    width:100%;
+    background-color: rgba(75,75,75,1);
+    position: relative;
+    /*background:url(./../img/bg1.jpg) no-repeat;*/
+    /*box-shadow: 5px 2px 1px 1px;*/
+}
+nav>ul{
+    width:60%;
+    height:68px;
+    position: relative;
+    left:200px;
+
+}
+nav>ul .tab{
+    float:left;
+    width:300px;
+    height:26px;
+    position:relative;
+    top:8px;
+    /*border:1px solid red;*/
+    padding-bottom:20px;
+    padding-right:5px;
+    background:url(./../img/line.png) no-repeat;
+    background-size:20px 25px;
+    background-position: 290px 14px;
+}
+#tab0{
+    background:none;
+    width:90px;
+    left:80px;
+}
+#li1{
+    width:90px;
+    overflow:hidden;
+    transition: 0.5s;
+    left:160px;
+}
+#li1:hover{
+    /*transform: translateX(-70px);*/
+    width:310px;
+}
+#tab0:hover>.article a{
+    color:#fb5057;
+}
+#li1:hover>.article a{
+    color:#fb5057;
+}
+#li2:hover>.article a{
+    color:#fb5057;
+}
+#li3:hover>.article a{
+    color:#fb5057;
+}
+#li4:hover>.article a{
+    color:#fb5057;
+}
+.detail a:hover{
+    color:#fb5057;
+}
+#li5:hover>.article a{
+    color:#fb5057;
+}
+#li5{
+    width:100px;
+    overflow:hidden;
+    transition: 0.5s;
+    left:440px;
+}
+#li2{
+    width:100px;
+    overflow:hidden;
+    transition: 0.5s;
+    left:240px;
+}
+#li2:hover{
+    /*transform: translateX(-70px);*/
+    width:310px;
+}
+#li3{
+    width:90px;
+    overflow:hidden;
+    transition: 0.5s;
+    left:320px;
+}
+#li3:hover{
+    /*transform: translateX(-80px);*/
+    width:300px;
+}
+#li4{
+    width:60px;
+    overflow:hidden;
+    transition: 0.5s;
+    left:400px;
+}
+#li4:hover{
+    /*transform: translateX(-70px);*/
+    width:300px;
+}
+nav>ul .tab .article{
+    width:100px;
+    font-size:22px;
+    font-family:  "Microsoft YaHei","Arial Narrow",HELVETICA;;
+    position:absolute;
+    top:10px;
+    left:0px;
+}
+nav>ul .tab .detail {
+    width: 200px;
+    font-size: 17px;
+    font-family: "Microsoft YaHei", "Arial Narrow", HELVETICA;;
+    position: absolute;
+    top: 15px;
+    left: 100px;
+    padding-right: 5px;
+}
+nav>ul a{
+    color:#fff;
+}
+.changemargin a{
+    margin-left:10px;
+}
+.changemargin1 a:nth-child(1){
+    margin-left:-30px;
+}
+.changemargin1 a{
+    margin-right:5px;
+}
+
+/*nav结束*/
+/*中医健康板块开始*/
+/* #zyjkbgc{
+    border:1px solid green;
+} */
+#zyjk{
+    position: relative;
+    width:70%;
+    height:450px;
+    /* border:1px solid red; */
+    margin:0 auto;
+}
+#wheel{
+    overflow:hidden;
+    position: relative;
+    width:700px;
+    /*图片的宽度*/
+    height:450px;
+    /*图片的高度*/
+    /*background-color: #000;*/
+}
+#wheel img{
+    width:700px;
+    height:450px;
+}
+#wheel #bigpicture{
+    width:600%;
+    /*让其足以支撑多张图片轮播*/
+    position: absolute;
+    /*动画要定位*/
+}
+#wheel #bigpicture li{
+    float:left;
+}
+.arrow-l,
+.arrow-r {
+    display:none;
+    /*等等让其隐藏 因为这是为了自动鼠标事件而做的按钮*/
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 24px;
+    height: 40px;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-family: 'icomoon';
+    font-size: 18px;
+    z-index:40;
+    /*ul和两个箭头都有定位 又因为ul是箭头的父级*/
+}
+.arrow-r {
+    right: 0;
+}
+#bgc{
+    position:relative;
+    top:360px;
+    width:700px;
+    height:90px;
+    background:rgba(0,0,0,0.2);
+}
+#bgc p{
+    /*这部分的字体根据不同图片更改不同的文字*/
+    color:white;
+    line-height:90px;
+    font-size:13px;
+}
+#bgc #smallpicture{
+    position: absolute;
+    top:5px;
+    left:340px;
+    /*700-400=300*/
+    width:700px;
+    z-index:101;
+}
+#smallpicture li{
+    display: block;
+    width:80px;
+    height:80px;
+    margin-right:10px;
+}
+.current{
+    background-color: white;
+}
+/*点击后变色*/
+.click{
+    background-color: red;
+}
+#smallpicture img{
+    margin-top:5px;
+    margin-left:5px;
+    width:70px;
+    height:70px;
+}
+#smallpicture li{
+    float:left;
+}
+/*轮播图部分结束*/
+/*公告栏部分开始*/
+
+#zxxw{
+    /*375+700=1075*/
+    width:375px;
+    height:450px;
+    position: absolute;
+    top:0;
+    left:700px;
+}
+#title img{
+    width:300px;
+    margin-left:30px;
+    margin-top:15px;
+}
+#words{
+    position: absolute;
+    top:0;
+    left:100px;
+}
+#title span{
+    color:rgb(185,27,27);
+    font-size:35px;
+    font-family:'蔡云汉清悠书法字体';
+}
+.words1{
+    margin-left:40px;
+    margin-top:-50px;
+}
+#words .words1 .words2{
+    color:black;
+}
+.news{
+    color:grey;
+}
+#content{
+    width:360px;
+    height:400px;
+    /* border:1px solid blue; */
+    position: absolute;
+    top:50px;
+    left:20px;
+    font-size:14px;
+}
+#content li{
+    border-bottom:1px dashed grey;
+    margin-top:18px;
+    cursor: pointer;
+    text-align: center;
+}
+#content li:hover{
+    color:red;
+}
+.more{
+    position: absolute;
+    top:440px;
+    left:350px;
+    color:red;
+    cursor: pointer;
+}
+
+/*中医健康板块结束*/
+/*经络穴位板块开始*/
+
+#jlxwbgc{
+    margin-top:10px;
+    width:100%;
+    position:relative;
+    /*border:1px solid blue;*/
+    height:550px;
+    top:10px;
+    overflow:hidden;
+}
+#jlxw{
+    position: relative;
+    width:70%;
+    height:550px;
+    /*border:1px solid darkgrey;*/
+    margin:0 auto;
+    overflow:hidden;
+
+}
+#jlxw .title{
+    width:100%;
+    height:60px;
+    /*border-top:2px dashed grey;*/
+    /*border-bottom:2px dashed rgb(235,235,229);*/
+    position: relative;
+}
+#jlxw .title img{
+    width:300px;
+    position:absolute;
+    top:15px;
+}
+#jlxw .title .words span{
+    color:rgb(185,27,27);
+    font-size:40px;
+    font-family:'蔡云汉清悠书法字体';
+}
+#jlxw .title .words{
+    position: absolute;
+    top:0;
+    left:60px;
+}
+#jlxw .title .words .words1 .words2{
+    color:black;
+}
+#jlxw .title .words .words1{
+    margin-top:-45px;
+}
+#jlxw .title .words .words1 span{
+    margin-left:5px;
+}
+
+#xueweipic{
+    /*width:350px;*/
+    /*height:480px;*/
+    border:1px solid #dedede;
+    position: absolute;
+    left:700px;
+    top:70px;
+}
+#xueweipic #magnifer .orginal{
+    height:480px;
+    width:350px;
+}
+#xueweipic .mask{
+    position: absolute;
+    width:200px;
+    height:200px;
+    background-color: #FEDE4F;
+    opacity: .4;
+    top:0;
+    left:0px;
+    border:1px solid #ccc;
+    cursor:move;
+    display:none;
+}
+#xueweipic .big{
+    width:500px;
+    height:550px;
+    /*background-color: pink;*/
+    position: absolute;
+    top:0;
+    left:-510px;
+    overflow:hidden;
+    display:none;
+    border:1px solid #ccc;
+    z-index:999;
+}
+#xueweipic .big img{
+    position: absolute;
+    top:0;
+    left:0px;
+}
+#xueweiwords{
+    position: relative;
+    width:620px;
+    height:460px;
+    top:10px;
+    left:40px;
+}
+.toubu{
+    width:300px;
+    height:140px;
+    position: absolute;
+}
+.mianbu{
+    width:300px;
+    height:140px;
+    position: absolute;
+    top:0;
+    left:320px;
+}
+.jinbu{
+    width:300px;
+    height:140px;
+    position: absolute;
+    top:160px;
+    left:0px;
+}
+.jianbu{
+    width:300px;
+    height:140px;
+    position: absolute;
+    top:320px;
+    left:0px;
+}
+.gebo{
+    width:300px;
+    height:140px;
+    position: absolute;
+    top:320px;
+    left:320px;
+}
+.shoubu{
+    width:300px;
+    height:140px;
+    position: absolute;
+    top:160px;
+    left:320px;
+}
+.toubu .d1,.mianbu .d1,.jinbu .d1,.gebo .d1,
+.shoubu .d1,.jianbu .d1{
+    width:300px;
+    border-bottom:1px dashed gainsboro;
+}
+.toubu div span,.mianbu div span,
+.jinbu div span,.gebo div span,.shoubu div span,
+.jianbu div span{
+    font-size:18px;
+    color:black;
+    position: absolute;
+    top:20px;
+    left:60px;
+}
+.toubu img,.mianbu img,
+.jinbu img,.gebo img,.shoubu img,.jianbu img{
+    width:50px;
+    height:50px;
+}
+.toubu div a,.mianbu div a,
+.jinbu div a,.gebo div a,.shoubu div a,.jianbu div a{
+    display: inline-block;
+    margin-top:15px;
+    margin-left:18px;
+}
+
+#sexbtn1 {
+    width:100px;
+    height:50px;
+    position: absolute;
+    z-index: 40;
+    left:680px;
+    top:90px;
+}
+#sexbtn1 .man,#sexbtn1 .woman{
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+    background-color: rgb(204,204,204);
+    margin-left:30px;
+    position: relative;
+    margin-top:5px;
+}
+#sexbtn1 .man{
+    background-color:red;
+}
+#sexbtn1 .man img,#sexbtn1 .woman img{
+    width:25px;
+    height:25px;
+    position: absolute;
+    top:2px;
+    left:2px;
+}
+#positionbtn1{
+    position:absolute;
+    left:970px;
+    top:400px;
+    z-index:1000;
+}
+#positionbtn1 #front{
+    width:80px;
+    height:40px;
+    /*border:1px solid red;*/
+    cursor: pointer;
+}
+#positionbtn1 #front div{
+    position:absolute;
+    font-size:17px;
+    top:4px;
+    left:40px;
+    color:red;
+}
+#positionbtn1 #aside{
+    width:80px;
+    height:40px;
+    cursor: pointer;
+}
+#positionbtn1 #aside div{
+    position:absolute;
+    font-size:17px;
+    top:46px;
+    left:40px;
+    color:darkgray;
+}
+#positionbtn1 #back{
+    width:80px;
+    height:40px;
+    cursor: pointer;
+}
+#positionbtn1 #back div{
+    position:absolute;
+    font-size:17px;
+    top:86px;
+    left:40px;
+    color:darkgray;
+}
+
+/*经络穴位板块结束*/
+/*中医养生板块开始*/
+
+#zyysbgc{
+    margin-top:10px;
+    width:100%;
+    position:relative;
+    /*border:1px solid blue;*/
+    height:660px;
+    top:20px;
+    /*overflow:hidden;*/
+}
+#zyys{
+    position: relative;
+    width:70%;
+    height:660px;
+    /*border:1px solid darkgrey;*/
+    margin:0 auto;
+    overflow:hidden;
+
+}
+#zyys .title{
+    width:100%;
+    height:60px;
+    border-top:2px dashed transparent;
+    border-bottom:2px dashed transparent;
+    position: relative;
+}
+#zyys .title img{
+    width:300px;
+    position:absolute;
+    top:15px;
+}
+#zyys .title .words span{
+    color:rgb(185,27,27);
+    font-size:40px;
+    font-family:'蔡云汉清悠书法字体';
+}
+#zyys .title .words{
+    position: absolute;
+    top:0;
+    left:60px;
+}
+#zyys .title .words .words1 .words2{
+    color:black;
+}
+#zyys .title .words .words1{
+    margin-top:-45px;
+}
+#zyys .title .words .words1 span{
+    margin-left:5px;
+}
+#hexagon{
+    height:550px;
+    width:100%;
+    position: relative;
+    left:30px;
+}
+.a{
+    position: absolute;
+    left:20px;
+    top:100px;
+    z-index:1;
+    transition: 1s;
+}
+.b{
+    z-index:1;
+    position: absolute;
+    left:210px;
+    transition: 1s;
+}
+.c{
+    z-index:1;
+    position: absolute;
+    left:210px;
+    top:210px;
+    transition: 1s;
+}
+.d{
+    z-index:1;
+    position: absolute;
+    left:400px;
+    top:110px;
+    transition: 1s;
+}
+.e{
+    z-index:1;
+    position: absolute;
+    left:590px;
+    top:0px;
+    transition: 1s;
+}
+.f{
+    z-index:1;
+    position: absolute;
+    left:590px;
+    top:210px;
+    transition: 1s;
+}
+.g{
+    z-index:1;
+    position: absolute;
+    left:780px;
+    top:110px;
+    transition: 1s;
+}
+.six,.child,.child_child{
+    width: 200px;
+    height:250px;
+    overflow: hidden;
+    transform: translateX(150px);
+}
+.six1,.child,.child_child{
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+}
+.six2,.child,.child_child{
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+}
+.six3,.child,.child_child{
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+}
+.six4,.child,.child_child{
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+}
+.six5,.child,.child_child{
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+}
+.six6,.child,.child_child{
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+}
+.six7,.child,.child_child{
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+}
+.six{
+    -webkit-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    transform: rotate(270deg);
+}
+.child{
+    -webkit-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+.child_child{
+    background: rgb(246,235,245);
+    -webkit-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.six1,.six2,.six3,.six4,.six5,.six6,.six7{
+    -webkit-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    transform: rotate(270deg);
+}
+.six1 .child,.six2 .child,.six3 .child,.six4 .child,.six5 .child,.six6 .child,.six7 .child{
+    -webkit-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+.six1 .child .child_child,
+.six2 .child .child_child,
+.six3 .child .child_child,
+.six4 .child .child_child,
+.six5 .child .child_child,
+.six6 .child .child_child,
+.six7 .child .child_child{
+    -webkit-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+.six1 .child .child_child{
+    background: rgb(228,212,225);
+}
+.six2 .child .child_child{
+    background: rgb(236,212,234);
+}
+.six3 .child .child_child{
+    background: rgb(228,212,225);
+}
+.six4 .child .child_child{
+    background: rgb(228,212,225);
+}
+.six5 .child .child_child{
+    background: rgb(246,236,245);
+}
+.six6 .child .child_child{
+    background: rgb(233,223,232);
+}
+.a .atitle,.b .btitle,.c .ctitle,.d .dtitle,
+.e .etitle,.f .ftitle,.g .gtitle{
+    position:absolute;
+    top:50px;
+    left:60px;
+    color:red;
+    font-size: 20px;
+}
+.a .awords,.b .bwords,.c .cwords,.d .dwords,
+.e .ewords,.f .fwords,.g .gwords{
+    position: absolute;
+    font-size:11px;
+    left:10px;
+    top:100px;
+}
+.hexagon-img {
+    transition: 1s;
+    transform: rotate(30deg);
+    position: absolute;
+    top:175px;
+    left:50px;
+    width: 199px;
+    height: 229px;
+    background: url('./../img/dj.jpg') center center no-repeat;
+    background-size: cover;
+    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.img1 {
+    background: url('./../img/jp.jpeg') center center no-repeat;
+    background-size: 350px;
+    top: 75px;
+    left:240px;
+    transition: 1s;
+}
+.img2{
+    background: url('./../img/xz.jpg') center center no-repeat;
+    top: 285px;
+    background-size: 350px;
+    left:240px;
+    transition: 1s;
+}
+.img3{
+    top: 184px;
+    left:430px;
+    transition: 1s;
+}
+.img4{
+    top: 75px;
+    left:621px;
+    transition:1s;
+}
+.img5{
+    top: 284px;
+    left:621px;
+    transition:1s;
+}
+.img6{
+    top: 185px;
+    left:810px;
+    transition: 1s;
+}
+#season{
+    position:relative;
+    top:-90px;
+    width:100%;
+}
+.seasonlogo{
+    width:100%;
+    height:20px;
+    /*border-bottom:1px dashed grey;*/
+}
+.seasonlogo img{
+    position:absolute;
+    top:-25px;
+    left:-10px;
+    width:60px;
+    height:60px;
+}
+.seasonlogo span{
+    font-size:16px;
+    position: absolute;
+    left:50px;
+}
+#seasonpicture{
+    width:100%;
+    position: relative;
+    height:120px;
+    /*border:1px solid blue;*/
+}
+#seasonpicture .leftbtn img{
+    width:50px;
+    height:50px;
+    position: absolute;
+    left:-12px;
+    top:35px;
+    transform: rotate(180deg);
+}
+#seasonpicture .rightbtn img{
+    width:50px;
+    height:50px;
+    position: absolute;
+    left:1025px;
+    top:35px;
+    z-index: 999;
+}
+.seasonfather{
+    width:90%;
+    overflow: hidden;
+    height:120px;
+    /*border:1px solid green;*/
+    left:45px;
+    position: relative;
+}
+#seasonpicture .seasonpicture{
+    width:250%;
+    position: absolute;
+}
+#seasonpicture .seasonpicture li{
+    float: left;
+    position: relative;
+}
+#seasonpicture .seasonpicture li a img{
+    width:80px;
+    height:80px;
+    margin-top:10px;
+    margin-left:15px;
+    opacity:0.85;
+}
+#seasonpicture .seasonpicture li div{
+   position: absolute;
+    left:40px;
+}
+
+/*中医养生结束*/
+/*中医膳食开始*/
+#zyyshaibgc{
+    margin-top:20px;
+    width:100%;
+    position:relative;
+    /*border:1px solid blue;*/
+    /*height:400px;*/
+    top:20px;
+    height:850px;
+    /*overflow:hidden;*/
+}
+#zyyshai{
+    position: relative;
+    width:70%;
+    height:850px;
+    /*border:1px solid darkgrey;*/
+    margin:0 auto;
+    overflow:hidden;
+
+}
+#zyyshai .title{
+    width:100%;
+    height:60px;
+    /*border-top:2px dashed grey;*/
+    /*border-bottom:2px dashed rgb(235,235,229);*/
+    position: relative;
+}
+#zyyshai .title img{
+    width:300px;
+    position:absolute;
+    top:15px;
+}
+#zyyshai .title .words span{
+    color:rgb(185,27,27);
+    font-size:40px;
+    font-family:'蔡云汉清悠书法字体';
+}
+#zyyshai .title .words{
+    position: absolute;
+    top:0;
+    left:60px;
+}
+#zyyshai .title .words .words1 .words2{
+    color:black;
+}
+#zyyshai .title .words .words1{
+    margin-top:-45px;
+}
+#zyyshai .title .words .words1 span{
+    margin-left:5px;
+}
+.zytp{
+    position: relative;
+    width:100%;
+    height:300px;
+    /*border:1px solid green;*/
+}
+.zytplogo{
+    width:100%;
+    height:40px;
+    /*border-bottom:1px dashed darkgrey;*/
+}
+.zytp .zytplogo img{
+    width:40px;
+    height:40px;
+}
+.zytp .zytplogo span{
+    font-size:16px;
+    position:absolute;
+    top:12px;
+    left:45px;
+}
+.pinyin{
+    height:50px;
+    width:100%;
+    /*border:1px solid red;*/
+}
+.pinyin span{
+    color:darkgrey;
+    position: absolute;
+    left:10px;
+    top:40px;
+    line-height:50px;
+}
+.pinyin .zimu{
+    position: absolute;
+    left:80px;
+    top:55px;
+}
+.zimu :first-child{
+    background:red;
+}
+
+.pinyin .zimu li{
+    margin-left:15.5px;
+    text-align:center;
+    line-height:20px;
+    width:20px;
+    height:20px;
+    float:left;
+    border:1px solid darkgrey;
+    cursor: pointer;
+}
+.ycpicture{
+    width:100%;
+    height:220px;
+    /*border:1px solid  red;*/
+    margin-left:82px;
+    margin-top:-10px;
+    position: relative;
+}
+.ycpicture .azy li,.ycpicture .bzy li,.ycpicture .czy li,.ycpicture .dzy li,.ycpicture .ezy li
+,.ycpicture .fzy li,.ycpicture .gzy li,.ycpicture .hzy li,.ycpicture .izy li,.ycpicture .jzy li
+,.ycpicture .kzy li,.ycpicture .lzy li,.ycpicture .mzy li,.ycpicture .nzy li,.ycpicture .ozy li,
+.ycpicture .pzy li,.ycpicture .qzy li,.ycpicture .rzy li,.ycpicture .szy li,.ycpicture .tzy li,
+.ycpicture .nzy li,.ycpicture .vzy li,.ycpicture .wzy li,.ycpicture .xzy li,.ycpicture .yzy li,
+.ycpicture .zzy li{
+    float:left;
+    margin-left:17px;
+    margin-top:20px;
+    position: relative;
+}
+.azy{
+    display: block;
+}
+.ycpicture img{
+    width:80px;
+    height:75px;
+}
+.bzy,.czy,.dzy,.ezy,.fzy,.gzy,.hzy,.izy,
+.jzy,.kzy,.lzy,.mzy,.nzy,.ozy,.pzy,.qzy,
+.rzy,.szy,.tzy,.nzy,.vzy,.wzy,.xzy,.yzy,
+.zzy{
+    display:none;
+}
+.ycpicture div{
+    position: absolute;
+   left:20px;
+}
+.zyss{
+    position: relative;
+    width:100%;
+}
+.zysslogo{
+    width:100%;
+    height:40px;
+}
+.zyss .zysslogo img{
+    position: absolute;
+    top:-12px;
+    left:-16px;
+    width:70px;
+    height:70px;
+}
+.zyss .zysslogo span{
+    font-size:17px;
+    position:absolute;
+    top:18px;
+    left:45px;
+}
+.zyssbanner{
+    margin-top:20px;
+    width:100%;
+    height:430px;
+    /*border:1px solid green;*/
+}
+.zyysnav li{
+    margin-left:70px;
+    margin-top:2px;
+    width:140px;
+    height:66px;
+    background-color: rgb(245,245,245);
+    color:rgb(102,102,102);
+    line-height:66px;
+    font-size:16px;
+    text-align:center;
+    transition: 0.5s;
+}
+.zyysnav .li1{
+    background-color: rgb(30,80,174);
+    color:white;
+}
+
+.zyssshow p{
+    font-weight: bold;
+    font-size:25px;
+}
+.zyssshow span{
+    display: block;
+    margin-top:15px;
+}
+.zyssshow{
+    width:600px;
+    height:360px;
+    /*border:1px solid red;*/
+    position: absolute;
+    top:60px;
+    left:300px;
+}
+.zyssshow div{
+    width:300px;
+    height:200px;
+    border:1px solid darkgrey;
+    position:absolute;
+}
+.zyssshow div img{
+    width:260px;
+    height:160px;
+    position: absolute;
+    top:20px;
+    left:20px;
+    float:left;
+}
+.showpicture1{
+    left:0;
+    top:150px;
+}
+.showpicture2{
+    left:350px;
+    top:150px;
+}
+
+
+/*中药膳食结束*/
+/*中医诊疗开始*/
+#zyzlbgc{
+    margin-top:20px;
+    width:100%;
+    position:relative;
+    /*border:1px solid blue;*/
+    /*height:400px;*/
+    top:20px;
+    height:380px;
+    /*overflow:hidden;*/
+}
+#zyzl{
+    position: relative;
+    width:70%;
+    /*height:800px;*/
+    /*border:1px solid darkgrey;*/
+    margin:0 auto;
+    overflow:hidden;
+
+}
+#zyzl .title{
+    width:100%;
+    height:60px;
+    /*border-top:2px dashed grey;*/
+    /*border-bottom:2px dashed rgb(235,235,229);*/
+    position: relative;
+}
+#zyzl .title img{
+    width:300px;
+    position:absolute;
+    top:15px;
+}
+#zyzl .title .words span{
+    color:rgb(185,27,27);
+    font-size:40px;
+    font-family:'蔡云汉清悠书法字体';
+}
+#zyzl .title .words{
+    position: absolute;
+    top:0;
+    left:60px;
+}
+#zyzl .title .words .words1 .words2{
+    color:black;
+}
+#zyzl .title .words .words1{
+    margin-top:-45px;
+}
+#zyzl .title .words .words1 span{
+    margin-left:5px;
+}
+.zyzlbanner{
+    width:90%;
+    height:300px;
+    /*border:1px solid green;*/
+    position: relative;
+    top:20px;
+  margin:0 auto;
+}
+.commonbanner{
+    box-sizing: border-box;
+    border:1px dashed darkgrey;
+    width:300px;
+    height:120px;
+    position:relative;
+}
+.xiaohuabanner{
+    box-sizing: border-box;
+    border:1px dashed darkgrey;
+    width:300px;
+    height:120px;
+    position:relative;
+    top:-120px;
+    left:330px;
+}
+.huxibanner{
+    box-sizing: border-box;
+    border:1px dashed darkgrey;
+    width:300px;
+    height:120px;
+    position:relative;
+    top:-240px;
+    left:660px;
+}
+.miniaobanner{
+    box-sizing: border-box;
+    border:1px dashed darkgrey;
+    width:300px;
+    height:120px;
+    position:relative;
+    top:-210px;
+    left:0px;
+}
+.neifenmibanner{
+    box-sizing: border-box;
+    border:1px dashed darkgrey;
+    width:300px;
+    height:120px;
+    position:relative;
+    top:-330px;
+    left:330px;
+}
+.shengzhibanner{
+    box-sizing: border-box;
+    border:1px dashed darkgrey;
+    width:300px;
+    height:120px;
+    position:relative;
+    top:-450px;
+    left:660px;
+}
+.commonleft,.xiaohualeft,
+.neifenmileft,.shengzhileft,.huxileft,.miniaoleft{
+    width:100px;
+    height:90px;
+    border-right:1px solid grey;
+    position:absolute;
+    top:10px;
+}
+.commonbanner .commonleft img,
+.xiaohuabanner .xiaohualeft img,
+.huxibanner .huxileft img,
+.miniaobanner .miniaoleft img,
+.shengzhibanner .shengzhileft img,
+.neifenmibanner .neifenmileft img{
+    position: absolute;
+    top:0px;
+    left:20px;
+}
+.commonleft div,
+.xiaohualeft div,
+.huxileft div,
+.miniaoleft div,
+.neifenmileft div,
+.shengzhileft div{
+    position:absolute;
+    font-size:16px;
+    top:70px;
+    left:20px;
+}
+.neifenmileft div{
+    left:12px;
+}
+
+.commonright{
+    width:150px;
+    height:100px;
+    /*border:1px solid red;*/
+    position: absolute;
+    left:120px;
+    top:10px;
+}
+.commonright a{
+    display: inline-block;
+    margin-left:10px;
+    margin-top:20px;
+}
+
+/*中医诊疗结束*/
+/*收尾底部*/
+#footerbgc{
+    /*margin-top:20px;*/
+    width:100%;
+    position:relative;
+    top:20px;
+    height:200px;
+    background:rgb(222,222,222);
+    /*overflow:hidden;*/
+}
+#footer{
+    position: relative;
+    width:80%;
+    height:200px;
+    /*border:1px solid yellow;*/
+    margin:0 auto;
+    /*overflow:hidden;*/
+}
+.footer1,.footer2,.footer3{
+    float:left;
+}
+.footer1{
+    width:33%;
+    height:200px;
+    background: url(./../img/footer1.webp);
+    position: relative;
+}
+.footer2{
+    width:33%;
+    height:200px;
+    background: url(./../img/footer2.png);
+    position: relative;
+}
+.footer3{
+    width:33%;
+    height:200px;
+    background: url(./../img/footer3.webp);
+    position: relative;
+}
+.footer1 img,.footer2 img,.footer3 img{
+    position: absolute;
+    top:60px;
+    left:150px;
+}
+#footer{
+    color:white;
+}
+.footer a{
+    font-size:16px;
+    position:absolute;
+    top:130px;
+    left:145px;
+    color:white;
+}
+.footer p{
+    position:absolute;
+    top:160px;
+    left:100px;
+}
+/*底部结束*/
+/*侧边栏开始*/
+aside{
+    position:fixed;
+    width:120px;
+    /*height:200px;*/
+    left:1480px;
+    top:250px;
+}
+aside a{
+    position: relative;
+    display: block;
+    transition: 1s;
+}
+aside span{
+    line-height:30px;
+}
+aside a span{
+    position: relative;
+    top:-10px;
+    left:10px;
+    font-weight:bold;
+    font-size:16px;
+}
+aside img{
+    width:30px;
+    height:30px;
+}

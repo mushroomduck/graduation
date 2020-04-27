@@ -1,0 +1,19 @@
+@-webkit-keyframes anim1{
+    0% {top: -30px;opacity: 1}
+    50% {top: 30px;opacity: 1}
+    75% {top: 30px ;opacity: 0}
+    100%{top:-30px;opacity: 0}
+}
+@-webkit-keyframes anim2{
+    0% {top: 30px;opacity: 0}
+    25% {top: -30px;opacity: 0}
+    50% {top: -30px;opacity: 1}
+    100%{top: 30px;opacity: 1}
+}
+.content p:nth-child(1){
+    -webkit-animation: anim1 3s linear infinite;
+}
+
+.content p:nth-child(2){
+    -webkit-animation: anim2 3s linear infinite;
+}

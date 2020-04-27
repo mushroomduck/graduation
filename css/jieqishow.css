@@ -1,0 +1,79 @@
+header{
+    /*图片的整体高度为147px*/
+    height:147px;
+    /*默认宽度为父元素及body元素的宽度*/
+    background:url(./../img/background1.jpg) no-repeat fixed;
+}
+.welcome{
+    height:30px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top:50px;
+    left:220px;
+}
+.content p{
+    position: absolute;
+    font-size:18px;
+}
+header>img{
+    /*调整图片的高度*/
+    height:117px;
+    position:absolute;
+    /*147-117=30/2=15 居中显示*/
+    top:15px;
+    left:320px;
+}
+header>div{
+    position:relative;
+    top:50px;
+    left:920px;
+}
+header>div>#text{
+    width:320px;
+    height:34px;
+    /*光标离边框的距离*/
+    padding-left:30px;
+    outline:none;
+    border:1px solid red;
+}
+#head h1{
+    font-size:50px;
+    position: absolute;
+    left:45%;
+    top:30px;
+    color:red;
+}
+/* 主体 */
+#banner{
+    width:100%;
+    position: relative;
+}
+#jqys{
+    width:70%;
+    height: 1000px;
+    margin:0 auto;
+    /* border:1px solid green; */
+}
+h2{
+    color:rgb(136,165,59);
+    font-size:25px;
+}
+div,li{
+    text-indent: 2rem;
+    font-size:20px;
+}
+h3{
+    font-size:20px;
+}
+video{
+    width:600px;
+    height:400px;
+    object-fit: fill;
+    margin-left:200px;
+    
+}
+li,div{
+    margin-top:5px;
+    line-height: 30px;;
+}

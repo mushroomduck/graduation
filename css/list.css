@@ -1,0 +1,56 @@
+
+.list .title {
+    /* height: 50px; */
+}
+.list .title h1{
+    line-height: 50px;
+    height: 50px;
+    border-bottom: 1px solid #e4e5e6;
+    padding-left: 10px ;
+    font-size: 22px;
+}
+.list .title > ul{
+    height: 40px;
+    padding: 0 20px;
+}
+.list .title > ul li{
+    float: left;
+    width: 100px;
+    line-height: 40px;
+}
+.list .title > ul li > input{
+    /* width: 20px; */
+}
+.list .title > ul li > label{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 5px;
+}
+.list .list_area{
+    margin-top: 20px;
+}
+.list .list_area ul li{
+    height: 60px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    border-bottom: 1px solid #e4e5e6;
+}
+.list .list_area ul li:hover{
+    background-color: #4d4d4e;
+    color: #fff;
+}
+.list .list_area ul li:hover a{
+    color: #fff;
+}
+.list .list_area ul li a {
+    line-height: 40px;
+    font-size: 14px;
+    color: #4d4d4e;
+    float: left;
+}
+.list .list_area ul li span{
+    float: right;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 40px;
+}

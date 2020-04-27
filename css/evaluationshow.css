@@ -1,0 +1,149 @@
+header{
+    /*图片的整体高度为147px*/
+    height:147px;
+    /*默认宽度为父元素及body元素的宽度*/
+    background:url(./../img/background1.jpg) no-repeat fixed;
+}
+header>img{
+    /*调整图片的高度*/
+    height:117px;
+    position:absolute;
+    /*147-117=30/2=15 居中显示*/
+    top:15px;
+    left:320px;
+}
+h1{
+    position: absolute;
+    /* top:50px; */
+}
+
+/* //留言区展示  手机 邮箱 姓名 内容*/
+#liuyanbgc{
+    background-color: rgb(228,229,230);
+    position: relative;
+    width:100%;
+    height:1200px;
+}
+#liuyanbanner{
+    position: relative;
+    width:70%;
+    height:1200px;
+    /* border:1px solid red; */
+    margin:0 auto;
+}
+#liuyan{
+    position: relative;
+}
+.liuyan{
+    position: relative;
+}
+.liuyan li{
+    position: relative;
+    margin-bottom:5px;
+    background: -webkit-linear-gradient(left, #e7daca, #e4c8a7);
+    background: -o-linear-gradient(right, #e7daca,  #e4c8a7); 
+    background: -moz-linear-gradient(right, #e7daca,  #e4c8a7); 
+    background: linear-gradient(to right, #e7daca,  #e4c8a7);
+  }
+  #xuhao{
+
+}
+.liuyan li h2{
+    box-sizing: border-box;
+    width:100%;
+    height:30px;
+    padding-left:10px;
+    /* border:1px solid green; */
+    font-size:20px;
+    line-height:30px;
+    background-color: rgb(244,245,245);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.liuyan li div{
+    width:100%;
+    height:70px;
+    /* border:1px solid blue; */
+    font-size:14px;
+    line-height:20px;
+    padding-top:5px;
+    background-color:white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-indent: 2em;
+}
+.liuyan{
+    box-shadow:  2px 10px 10px #222;
+  
+    width: 100%;;
+}
+#page_last{
+    position: absolute;
+    left:900px;
+}
+
+
+
+
+
+
+
+/* 底部 */
+#footerbgc{
+    /*margin-top:20px;*/
+    width:100%;
+    position:relative;
+    top:0px;
+    height:200px;
+    background:rgb(222,222,222);
+    /*overflow:hidden;*/
+}
+#footer{
+    position: relative;
+    width:80%;
+    height:200px;
+    /*border:1px solid yellow;*/
+    margin:0 auto;
+    /*overflow:hidden;*/
+}
+.footer1,.footer2,.footer3{
+    float:left;
+}
+.footer1{
+    width:33%;
+    height:200px;
+    background: url(./../img/footer1.webp);
+    position: relative;
+}
+.footer2{
+    width:33%;
+    height:200px;
+    background: url(./../img/footer2.png);
+    position: relative;
+}
+.footer3{
+    width:33%;
+    height:200px;
+    background: url(./../img/footer3.webp);
+    position: relative;
+}
+.footer1 img,.footer2 img,.footer3 img{
+    position: absolute;
+    top:60px;
+    left:150px;
+}
+#footer{
+    color:white;
+}
+.footer a{
+    font-size:16px;
+    position:absolute;
+    top:130px;
+    left:145px;
+    color:white;
+}
+.footer p{
+    position:absolute;
+    top:160px;
+    left:100px;
+}
